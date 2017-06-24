@@ -13,11 +13,6 @@
   </thead>
 
   <tbody>
-    <% paragraph_number=1 %>
-    <% 5.times do %>
-      <p> hello <%= paragraph_number %> </p>
-      <% paragraph_number = paragraph_number+1 %>
-    <% end %>
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
