@@ -8,9 +8,10 @@
       <div class="row">
         <% @products.each do |product| %>
           <div class="col-sm-6 col-md-4">
-            <%= image_tag(product.image_url, class: "img-responsive") %>
-            <a href=#><%= product.name.upcase %></a>
-            <p>color:<%= product.colour %> | <%= product.description %></p>
+            <a href=/products/<%= product.id %>><%= image_tag(product.image_url, class: "img-responsive") %></a>
+            <a href=/products/<%= product.id %>><%= product.name.upcase %></a>
+            <p>color: <%= product.colour.upcase %></p>
+            <p class="card-text"><%= product.description %></p>
             <strong><%= number_to_currency(product.price, :unit => "$") %></strong>
           </div>
         <% end %>
