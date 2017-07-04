@@ -33,3 +33,23 @@ footer {
   height: 30px;
   background-color: #35A26E;
 }
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.navbar-brand {
+  height: 80px;
+}
+
+.nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+

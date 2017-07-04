@@ -24,7 +24,7 @@
           </button>
 
           <a class="navbar-brand" href="/">
-            Bike SF
+            <div><%= image_tag('BikeSF-logo.jpg', size:"100x60") %></div>
           </a>
         </div>
 
@@ -48,7 +48,9 @@
     </nav>
     <%= yield %>
     <footer class="navbar-fixed-bottom">
-      <div class="container-fluid"><p>&copy; 2017 San Francisco</p></div>
+      <div class="container-fluid">
+        <p>&copy; 2017 Bike SF.</p>
+      </div>
     </footer>
   </body>
 </html>
