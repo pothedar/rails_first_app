@@ -10,7 +10,7 @@
   <div class="carousel-inner" role="listbox">
     <% @featured_products.each do |product| %>
     <div class="item<%= " active" if product == @featured_products.first %>">
-      <a href=/products/<%= product.id %>><%= image_tag(product.image_url, class: "img-responsive") %></a>
+      <%= link_to image_tag(product.image_url, class: "img-responsive"), product %>
       <div class="carousel-caption">
         <h2><%= product.name.upcase %></h2>
       </div>

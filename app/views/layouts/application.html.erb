@@ -30,17 +30,17 @@
 
         <div class="collapse navbar-collapse navbarCollapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class=<%= is_active?('/products')%>>
-                  <a href="/products">Products</a>
+                <li class=<%= is_active?(products_path)%>>
+                  <%= link_to "Products", products_path %>
                 </li>
-                <li class=<%= is_active?('/orders')%>>
-                  <a href="/orders">Orders</a>
+                <li class=<%= is_active?(orders_path)%>>
+                  <%= link_to "Orders", orders_path %>
                 </li>
-                <li class=<%= is_active?('/static_pages/about') %>>
-                  <a href="/static_pages/about">About</a>
+                <li class=<%= is_active?(static_pages_about_path) %>>
+                  <%= link_to "About", static_pages_about_path %>
                 </li>
-                <li class=<%= is_active?('/static_pages/contact') %>>
-                  <a href="/static_pages/contact">Contact</a>
+                <li class=<%= is_active?(static_pages_contact_path) %>>
+                  <%= link_to "Contact", static_pages_contact_path %>
                 </li>
             </ul>
         </div>
