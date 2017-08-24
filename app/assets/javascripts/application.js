@@ -14,3 +14,11 @@
 //= require turbolinks
 //= require jquery
 //= require_tree .
+
+var fadeAway = function() {
+  $(".alert").delay(2000).fadeOut(800);
+};
+
+$(document).on('turbolinks:load ajaxSuccess', function() {
+  fadeAway();
+});
