@@ -19,6 +19,7 @@
         </span>
       </p>
       <p><%= @product.description %></p>
+      <p><b>Average Rating:</b> <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
     </div>
   </div>
 </div>
@@ -26,3 +27,17 @@
 <div class="padding">
   <%= link_to 'Edit', edit_product_path(@product) %>
 </div>
+<div class="container-fluid">
+  <div class="row">
+    <% if user_signed_in? %>
+      <div class="col-xs-12 col-sm-6">
+        <%= render "new_comment" %>
+      </div>
+    <% end %>
+    <div class="col-xs-12 col-sm-6">
+      <%= render 'comments' %>
+    </div>
+  </div>
+</div>
+  
+

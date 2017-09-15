@@ -47,9 +47,17 @@
               <li>
                 <%= form_tag(products_path, method: "get", class: "navbar-form navbar-right") do %>
                     <%= text_field_tag(:q, "", type: "text", class: "form-control", placeholder: "search text") %>
-                    <%= submit_tag("Search", class: "btn btn-default") %>
+                    <%= submit_tag("Search", class: "btn btn-primary") %>
                 <% end %>
               </li>
+              <% if current_user && current_user.admin? %>
+                <li><%= link_to('Users', users_path) %></li>
+                <li><%= link_to('My Account', edit_user_path(current_user)) %></li>
+              <% elsif signed_in? %>
+                <li><%= link_to('My Account', edit_user_path(current_user)) %></li>                
+              <% else %>
+                <li><%= link_to('Sign up', new_user_registration_path) %></li>
+              <% end %>
               <li>
                 <% if user_signed_in? %>
                   <%= link_to('Logout', destroy_user_session_path, method: :delete)%>
