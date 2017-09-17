@@ -9,6 +9,7 @@ class Ability
     can :create, Comment
     if user.admin?
       can :destroy, Comment
+      can :manage, User
     else
       cannot :destroy, Comment
     end

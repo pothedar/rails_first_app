@@ -8,4 +8,9 @@
   <div class="rated" data-score="<%= comment.rating %>"></div>
   <%= comment.body %></p>
 <% end %>
-<%= will_paginate @comments %>
+<div class="flickr_pagination">
+  <div class="page_info">
+    <%= page_entries_info @comments %>
+  </div>
+  <%= will_paginate @comments %>
+</div>
